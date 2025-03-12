@@ -81,20 +81,21 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    text-align: center;
     padding-top: 64px;
+    padding-bottom: 2rem;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .hero-text {
     flex: 1;
     text-align: left;
+    padding-left: 2rem;
 }
 
 .hero-image {
@@ -105,10 +106,10 @@ body {
 }
 
 .hero-image img {
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     height: auto;
-    border-radius: 50%;  /* For circular image */
+    border-radius: 50%;
     border: 4px solid var(--primary-color);
     box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
     transition: transform 0.3s ease;
@@ -119,8 +120,9 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .highlight {
@@ -128,10 +130,25 @@ body {
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
     color: var(--text-medium-emphasis);
     opacity: 0.87;
+    padding-bottom: 2rem;
+    position: relative;
+    border-bottom: none;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color),
+                0 0 10px var(--primary-color);
 }
 
 /* Buttons */
@@ -171,7 +188,7 @@ body {
 
 /* Sections */
 section {
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 h2 {
@@ -184,13 +201,14 @@ h2 {
 .about {
     position: relative;
     overflow: hidden;
+    padding-top: 2rem;
 }
 
 .about::before {
-    content: '<about>';
+    content: 'About me';
     font-family: 'Courier New', monospace;
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: -20px;
     font-size: 100px;
     color: rgba(187, 134, 252, 0.03);
@@ -198,8 +216,18 @@ h2 {
 }
 
 .about-content {
-    position: relative;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-left {
+    order: 1;
+}
+
+.about-right {
+    order: 2;
 }
 
 .section-subtitle {
@@ -214,7 +242,7 @@ h2 {
     position: relative;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .about-image {
@@ -222,12 +250,16 @@ h2 {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color),
+                0 0 10px var(--primary-color);
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .about-image:hover img {
@@ -331,6 +363,53 @@ h2 {
     .about-image-container {
         margin-bottom: 2rem;
     }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        padding-left: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .hero-image img {
+        max-width: 500px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-left {
+        order: 2;
+    }
+
+    .about-right {
+        order: 1;
+        text-align: center;
+    }
+
+    .skill-tags {
+        justify-content: center;
+    }
+
+    .about-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
 }
 
 /* Projects Section */
@@ -381,7 +460,7 @@ h2 {
 }
 
 .contact::before {
-    content: '</contact>';
+    content: 'Contact me';
     font-family: 'Courier New', monospace;
     position: absolute;
     bottom: 20px;
@@ -839,5 +918,46 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         z-index: 1000; /* Ensure menu is above backdrop */
+    }
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-buttons i {
+    font-size: 1.1rem;
+}
+
+/* About CTA */
+.about-cta {
+    margin: 2rem 0;
+}
+
+.about-cta .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .about-cta {
+        text-align: center;
     }
 }
