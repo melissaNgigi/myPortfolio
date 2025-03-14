@@ -99,4 +99,53 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         mobileMenuBtn.classList.remove('active');
         navLinks.classList.remove('active');
     });
+});
+
+// Initialize AOS
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
+
+// Theme Toggle Functionality
+const themeToggle = document.querySelector('.theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check for saved theme preference or use system preference
+const currentTheme = localStorage.getItem('theme') || 
+                    (prefersDarkScheme.matches ? 'dark' : 'light');
+
+// Set initial theme
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+// Theme toggle click handler
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
+
+// Update theme icon
+function updateThemeIcon(theme) {
+    const icon = themeToggle.querySelector('i');
+    if (theme === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+}
+
+// Listen for system theme changes
+prefersDarkScheme.addEventListener('change', (e) => {
+    const newTheme = e.matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
 }); 

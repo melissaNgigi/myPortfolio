@@ -23,11 +23,11 @@
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="https://my-portfolio-seven-brown-11.vercel.app/favicon.png">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff6b6b'/><text y='50%' x='50%' dy='.35em' text-anchor='middle' font-size='50' font-family='Arial' font-weight='bold' fill='white'>MN</text></svg>">
     
-        <meta name="description" content="Melissa Ngigi - Web Developer, Designer, Virtual Assistant and Social Media Manager based in Nairobi, Kenya. Specializing in responsive web development and UI/UX design.">
+        <meta name="description" content="Melissa Ngigi - Web Developer, UI/UX Designer based in Nairobi, Kenya. Specializing in responsive web development and UI/UX design.">
         
-        <meta name="keywords" content="web developer, designer, virtual assistant, social media manager, Nairobi, Kenya, HTML, CSS, JavaScript, React, Frontend Developer, UI/UX Designer">
+        <meta name="keywords" content="web developer, UI/UX Designer, Nairobi, Kenya, HTML, CSS, JavaScript, React, Frontend Developer, UI/UX Designer">
         
         <meta name="author" content="Melissa Ngigi">
         
@@ -36,7 +36,7 @@
         
         <!-- Open Graph (for social media sharing) -->
         <meta property="og:title" content="Melissa Ngigi - Web Developer & Designer">
-        <meta property="og:description" content="Web Developer, Designer, Virtual Assistant and Social Media Manager based in Nairobi, Kenya">
+        <meta property="og:description" content="Web Developer, UI/UX Designer">
         <meta property="og:image" content="https://my-portfolio-seven-brown-11.vercel.app/melissa_hero.png">
         <meta property="og:url" content="https://my-portfolio-seven-brown-11.vercel.app/">
         <meta property="og:type" content="website">
@@ -45,7 +45,7 @@
         <!-- Twitter Cards (for Twitter sharing) -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Melissa Ngigi - Web Developer & Designer">
-        <meta name="twitter:description" content="Web Developer, Designer, Virtual Assistant and Social Media Manager based in Nairobi, Kenya">
+        <meta name="twitter:description" content="Web Developer, UI/UX Designer">
         <meta name="twitter:image" content="https://my-portfolio-seven-brown-11.vercel.app/melissa_hero.png">
         
         
@@ -67,6 +67,10 @@
           ]
         }
         </script>
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     
 <body>
@@ -74,6 +78,7 @@
     <nav class="nav-bar">
         <div class="container">
             <div class="logo">Melissa Ngigi</div>
+           
             <button class="mobile-menu-btn">
                 <span class="hamburger-icon">
                     <span class="line"></span>
@@ -88,36 +93,44 @@
                 <li><a href="#projects">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
                 <h1>Hi, I'm <span class="highlight">Melissa Ngigi</span></h1>
-                <p class="subtitle">Web Developer, Designer, Virtual Assistant and Social Media Manager</p>
+                <p class="subtitle">Web Developer, UI/UX Designer</p>
+            </div>
+            <div class="hero-image">
+                <img src="" alt="Melissa Ngigi">
+            </div>
+            
+            <!-- Floating contact panel -->
+            <div class="hero-contact-panel">
                 <div class="hero-social-links">
-                    <a href="https://wa.me/+254115400496" target="_blank" class="social-link">
+                    <a href="https://wa.me/+254115400496" target="_blank" class="social-link" data-aos="fade-left" data-aos-delay="100">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="mailto:ngigimelissa@gmail.com" class="social-link">
+                    <a href="mailto:ngigimelissa@gmail.com" class="social-link" data-aos="fade-left" data-aos-delay="200">
                         <i class="far fa-envelope"></i>
                     </a>
-                    <a href="tel:+254115400496" class="social-link">
+                    <a href="tel:+254115400496" class="social-link" data-aos="fade-left" data-aos-delay="300">
                         <i class="fas fa-phone"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/melissa-ngigi/" target="_blank" class="social-link">
+                    <a href="https://www.linkedin.com/in/melissa-ngigi/" target="_blank" class="social-link" data-aos="fade-left" data-aos-delay="400">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/melissaNgigi" target="_blank" class="social-link">
+                    <a href="https://github.com/melissaNgigi" target="_blank" class="social-link" data-aos="fade-left" data-aos-delay="500">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="melissa_hero.png" alt="Melissa Ngigi">
-            </div>
+            
         </div>
     </section>
 
@@ -126,10 +139,10 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <div class="about-left">
+                <div class="about-left" data-aos="fade-right" data-aos-delay="200">
                     <div class="about-image-container">
                         <div class="about-image">
-                            <img src="about_mel.jpg" alt="Melissa Ngigi">
+                            <img src="" alt="Melissa Ngigi">
                         </div>
                         <div class="experience-card">
                             <span class="number">1+</span>
@@ -138,30 +151,30 @@
                        
                     </div>
                 </div>
-                <div class="about-right">
+                <div class="about-right" data-aos="fade-left" data-aos-delay="400">
                     <div class="section-subtitle">Get to know me</div>
                     <div class="about-text">
-                        <p>💻 Hi, I'm Melissa Wanjiku Ngigi, a web developer with a background in technology and business. I specialize in building responsive, user-friendly websites and have experience in HTML, CSS, JavaScript, and React. With a strong foundation in project management and digital strategy, I love crafting seamless web experiences that blend functionality with aesthetics.</p>
+                        <p>💻 Hi, I'm Melissa Wanjiku Ngigi, a web developer with a background in technology. I specialize in building responsive, user-friendly websites and have experience in HTML, CSS, JavaScript, and React. I love crafting seamless web experiences that blend functionality with aesthetics.</p>
                     </div>
                     <div class="about-cta">
                         <a href="Melissa Ngigi resume .pdf" target="_blank" class="btn-secondary">
-                            <i class="fas fa-file-alt"></i> View Resume
+                            <i class="far fa-file-pdf"></i> View Resume
                         </a>
                     </div>
                     <div class="skills-section">
                         <h3>Tech Stack</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Wordpress</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="100">HTML</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="200">CSS</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="300">JavaScript</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="400">React</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="500">Python</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="600">Flask</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="700">SQL</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="800">Git</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="900">GitHub</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="1000">Linux</span>
+                            <span class="skill-tag" data-aos="fade-up" data-aos-delay="1100">Wordpress</span>
                         </div>
                     </div>
                 </div>
@@ -174,29 +187,30 @@
         <div class="container">
             <h2>Services</h2>
             <div class="service-grid">
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>I create responsive, user-friendly websites that are optimized for performance and user experience.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>I design beautiful, user-friendly websites that are optimized for performance and user experience.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Digital Marketing</h3>
-                    <p>I help businesses grow their online presence and reach their target audience through digital marketing strategies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="social-icons">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <i class="fas fa-code"></i>
+                            <h3>Web Development</h3>
+                            <p>Building modern, responsive websites and web applications</p>
+                            
+                        </div>
+                        <div class="service-card-back">
+                            <p>I create responsive, user-friendly websites that are optimized for performance and user experience. Using modern technologies and best practices to deliver exceptional results.</p>
+                        </div>
                     </div>
-                    <h3>Social Media Management</h3>
-                    <p>I manage social media accounts for businesses and help them grow their online presence and reach their target audience.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>UI/UX Design</h3>
+                            <p>Creating beautiful and intuitive user interfaces</p>
+                        </div>
+                        <div class="service-card-back">
+                            <p>I design beautiful, intuitive interfaces that enhance user experience. Focusing on user-centered design principles to create engaging and accessible digital experiences.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,14 +222,13 @@
             <h2>Portfolio</h2>
             <div class="project-grid">
                 <!-- Project Card Template -->
-                <div class="project-card">
-                    <img src="akoko.png" alt="Project">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="akoko.png" alt="St. Paul's Akoko School">
                     <div class="project-info">
-                        <h3>Project Name</h3>
-                        <p>Project description goes here</p>
+                        <h3>St. Paul's Akoko School</h3>
+                        <p>A modern school website featuring an intuitive interface for students, parents, and staff. Built with responsive design principles.</p>
                         <div class="project-links">
                             <a href="http://akokoschool.co.ke/" class="btn-secondary">View Live</a>
-                            
                         </div>
                     </div>
                 </div>
@@ -229,12 +242,12 @@
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-wrapper">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
                     <div class="section-subtitle">Contact Information</div>
                     <p class="contact-description">Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
                     
                     <div class="contact-details">
-                        <div class="contact-item">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
                             <i class="fas fa-phone-alt"></i>
                             <div class="contact-text">
                                 <h4>Phone</h4>
@@ -242,7 +255,7 @@
                             </div>
                         </div>
                         
-                        <div class="contact-item">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
                             <i class="fas fa-envelope"></i>
                             <div class="contact-text">
                                 <h4>Email</h4>
@@ -250,7 +263,7 @@
                             </div>
                         </div>
                         
-                        <div class="contact-item">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="contact-text">
                                 <h4>Location</h4>
@@ -259,7 +272,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-social">
+                    <div class="contact-social" data-aos="fade-up" data-aos-delay="600">
                         <a href="https://wa.me/+254115400496" target="_blank" class="social-link">
                             <i class="fab fa-whatsapp"></i>
                         </a>
@@ -272,8 +285,9 @@
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper">
+                <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
                     <form class="contact-form" id="contact-form">
+                        <h2>Contact Me</h2>
                         <div class="form-group">
                             <input type="text" id="name" name="from_name" required>
                             <label for="name">Name</label>
