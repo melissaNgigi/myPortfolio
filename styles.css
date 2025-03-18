@@ -1691,3 +1691,26 @@ html {
 [data-theme="dark"] .social-link.github-link i {
     color: #f0f6fc;
 }
+
+/* Brand colors for contact item icons */
+.contact-item .phone-icon {
+    color: #4285F4; /* Google blue */
+}
+
+.contact-item .email-icon {
+    color: #D44638; /* Gmail red */
+}
+
+.contact-item .location-icon {
+    color: #EA4335; /* Google Maps red */
+}
+
+/* Keep hover effect */
+.contact-item:hover i {
+    color: var(--coral-primary);
+}
+
+/* Dark theme adjustment */
+[data-theme="dark"] .contact-item:hover i {
+    color: var(--coral-primary);
+}
