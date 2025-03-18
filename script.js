@@ -104,8 +104,17 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Initialize AOS
 AOS.init({
     duration: 800,
-    once: true,
-    offset: 100
+    offset: 100,
+    mirror: true,
+    anchorPlacement: 'top-bottom',
+    easing: 'ease-in-out',
+    once: false,
+    disable: 'mobile'
+});
+
+// Refresh AOS on scroll to handle dynamic content
+window.addEventListener('scroll', () => {
+    AOS.refresh();
 });
 
 // Theme Toggle Functionality
